@@ -1,0 +1,6 @@
+{
+  "name": "HangIt",
+  "description": "Videojuego educativo móvil tipo ahorcado para evaluar el dominio de la conjugación verbal en inglés.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

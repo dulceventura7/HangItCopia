@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HangIt - Dominio de la Conjugación Verbal</title>
+    <meta name="description" content="Videojuego educativo móvil tipo ahorcado para evaluar el dominio de la conjugación verbal en inglés." />
+    <meta property="og:title" content="HangIt - Dominio de la Conjugación Verbal" />
+    <meta property="og:description" content="Videojuego educativo móvil tipo ahorcado para evaluar el dominio de la conjugación verbal en inglés." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="mobile-screen" id="app">
+      <!-- CA 5.2: Barra superior azul oscuro de ancho completo -->
+      <header class="barra-superior" role="banner">
+        <span id="etiqueta-ronda" class="etiqueta-ronda">Ronda 1</span>
+        <span id="etiqueta-reactivo" class="etiqueta-reactivo">Reactivo 1 de 5</span>
+      </header>
+
+      <!-- Área de contenido con scroll vertical asegurado -->
+      <div class="contenido-juego">
+        <!-- CA 5.3: Franja del contador de intentos restantes -->
+        <div id="franja-intentos" class="franja-intentos" aria-live="polite">
+          Intentos restantes: 7 de 7
+        </div>
+
+        <!-- CA 5.4: Tarjeta central con la oración incompleta -->
+        <section class="tarjeta-oracion" aria-label="Oración a completar">
+          <p id="texto-oracion" class="texto-oracion"></p>
+        </section>
+
+        <!-- CA 5.5: Línea de letras ya utilizadas -->
+        <div id="etiqueta-letras-usadas" class="etiqueta-letras-usadas">
+          Letras usadas: -
+        </div>
+
+        <!-- CA 5.6 & CA 5.7: Caja de texto para un carácter con teclado alfabético -->
+        <input
+          id="caja-letra"
+          class="caja-letra"
+          type="text"
+          maxlength="1"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="characters"
+          spellcheck="false"
+          inputmode="text"
+          aria-label="Caja de letra"
+        />
+
+        <!-- CA 5.8: Botón principal de comprobar jugada -->
+        <button id="boton-comprobar" class="boton-comprobar" type="button">
+          Comprobar
+        </button>
+
+        <!-- CA 5.9: Área de avisos con altura fija reservada -->
+        <div id="area-avisos" class="area-avisos aviso-vacio" role="alert" aria-live="assertive"></div>
+
+        <!-- CA 5.10, CA 13.4, CA 15.3: Botón Siguiente Reactivo -->
+        <div class="contenedor-siguiente">
+          <button id="boton-siguiente" class="boton-siguiente oculto" type="button">
+            Siguiente reactivo
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Módulo de lógica del juego -->
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
